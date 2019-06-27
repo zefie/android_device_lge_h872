@@ -23,12 +23,12 @@
 # definition file).
 #
 
-LOCAL_PATH := device/lge/h872
+DEVICE_PATH := device/lge/h872
 
 # inherit from common g6
 -include device/lge/g6-common/BoardConfigCommon.mk
 
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
 
