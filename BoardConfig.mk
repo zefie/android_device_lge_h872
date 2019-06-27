@@ -47,8 +47,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := armv7-a-neon
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-#TARGET_HW_DISK_ENCRYPTION := true
+#TW_INCLUDE_CRYPTO := true
+TARGET_HW_DISK_ENCRYPTION := true
+TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff loop.max_part=7
@@ -95,3 +96,6 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 PLATFORM_SECURITY_PATCH := 2019-01-05
+
+# Ignore LG's bootloader wipe commands
+TW_IGNORE_MISC_WIPE_DATA := true
